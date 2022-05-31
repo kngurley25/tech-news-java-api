@@ -1,6 +1,7 @@
 package com.technews.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 import javax.persistence.*;
 import javax.xml.stream.events.Comment;
@@ -8,7 +9,7 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-@Entity
+@EntityScan
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name = "user")
 
